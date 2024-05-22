@@ -1,0 +1,5 @@
+<p *ngIf="editMode" [innerHtml]="data" contentEditable="true" (blur)="cacheChanges($event)">
+</p>
+
+<p [innerHtml]="data" *ngIf="!editMode">
+</p>

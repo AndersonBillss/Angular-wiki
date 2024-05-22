@@ -1,0 +1,46 @@
+<div class="page" [ngClass]="editMode?'editMode':'viewMode'">
+    <div class="page-top">
+        <h1>
+            {{title | titlecase}}
+        </h1>
+
+        <div class="edit-tools">
+            <div *ngIf="editMode">
+                <input [(ngModel)]="newLink">
+
+                <div class="edit button" (mousedown)="addLink()">
+                    Create Link
+                </div>
+                <div class="edit button" (mousedown)="removeLink()">
+                    Remove Link
+                </div>
+
+            </div>
+            <div>
+                <div class="edit button" (click)="toggleEditMode()">
+                    {{editMode?"save":"edit"}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngFor="let element of pageContents; let i=index">
+        <div *ngIf="element.type === 'Header'">
+            <h1>
+                {{element.text}}
+            </h1>
+        </div>
+
+        <app-paragraph *ngIf="element.type === 'Paragraph'"
+        [editMode]="editMode"
+        [(data)]="pageContents[i].text"
+        >
+        </app-paragraph>
+    </div>
+
+
+    <div (click)="test()" class="edit button">
+        test
+    </div>
+</div>

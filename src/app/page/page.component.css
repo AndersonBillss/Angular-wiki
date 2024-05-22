@@ -1,0 +1,36 @@
+.editMode{
+    border: 3px var(--primary-color) solid;
+}
+.viewMode{
+    border: 3px var(--background-color) solid;
+}
+
+.page{
+    margin: 15px;
+    padding: 15px;
+}
+
+.page-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-top h1{
+    padding: 5px 50px 5px 5px;
+    border-bottom: 3px var(--primary-dark) solid;
+}
+.edit.button{
+    padding: 15px;
+    background-color: var(--primary-light);
+}
+
+.edit-tools{
+    display: flex;
+}
+.edit-tools * {
+    margin: auto 15px;
+}
+
+
+
