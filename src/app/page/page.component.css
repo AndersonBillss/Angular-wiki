@@ -25,12 +25,5 @@
     background-color: var(--primary-light);
 }
 
-.edit-tools{
-    display: flex;
-}
-.edit-tools * {
-    margin: auto 15px;
-}
-
 
 

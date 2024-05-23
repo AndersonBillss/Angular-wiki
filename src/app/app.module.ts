@@ -15,6 +15,7 @@ import { HeaderComponent } from './page/elements/header/header.component';
 import { ParagraphComponent } from './page/elements/paragraph/paragraph.component';
 import { ContentEditableDirective } from './directives/ContentEditableDirective';
 import { RouterModule } from '@angular/router';
+import { EditToolbarComponent } from './edit-toolbar/edit-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RouterModule } from '@angular/router';
     PageComponent,
     HeaderComponent,
     ParagraphComponent,
-    ContentEditableDirective
+    ContentEditableDirective,
+    EditToolbarComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
