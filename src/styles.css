@@ -20,7 +20,8 @@
     color: var(--text-color);
 }
 a{
-    color: #36c
+    color: #36c;
+    text-decoration: none;
 }
 a:visited{
   color:#795cb2
@@ -28,6 +29,10 @@ a:visited{
 a:active{
     color: #edab00;
 }
+a:hover{
+    text-decoration: underline;
+}
+
 
 html{
     background-color: var(--background-color);

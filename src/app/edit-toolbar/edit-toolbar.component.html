@@ -1,15 +1,14 @@
-<div class="edit-tools">
-    <div>
-        <input [(ngModel)]="newLink">
+<div class="edit-toolbar">
 
-        <div class="edit button" (mousedown)="addLink()">
-            Create Link
+    <div class="edit-tools">
+        <div class="edit button" *ngFor="let tool of tools; let i = index" (click)="selectTool(i)">
+            {{tool}}
         </div>
-        <div class="edit button" (mousedown)="removeLink()">
-            Remove Link
-        </div>
-
     </div>
 
+    <div class="tool">
+        <app-link *ngIf="tools[selectedToolIndex] === 'Link'"></app-link>
+        <app-element *ngIf="tools[selectedToolIndex] === 'Element'"></app-element>
+    </div>
 
 </div>

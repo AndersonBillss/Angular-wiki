@@ -13,9 +13,10 @@ import { StandardButtonComponent } from './standard-button/standard-button.compo
 import { PageComponent } from './page/page.component';
 import { HeaderComponent } from './page/elements/header/header.component';
 import { ParagraphComponent } from './page/elements/paragraph/paragraph.component';
-import { ContentEditableDirective } from './directives/ContentEditableDirective';
 import { RouterModule } from '@angular/router';
 import { EditToolbarComponent } from './edit-toolbar/edit-toolbar.component';
+import { LinkComponent } from './edit-toolbar/tools/link/link.component';
+import { ElementComponent } from './edit-toolbar/tools/element/element.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,9 @@ import { EditToolbarComponent } from './edit-toolbar/edit-toolbar.component';
     PageComponent,
     HeaderComponent,
     ParagraphComponent,
-    ContentEditableDirective,
-    EditToolbarComponent
+    EditToolbarComponent,
+    LinkComponent,
+    ElementComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

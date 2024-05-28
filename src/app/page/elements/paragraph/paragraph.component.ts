@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { encodePageContent, parsePageContent } from '../../../functions/pageContentFunctions';
 
 @Component({
   selector: 'app-paragraph',
@@ -20,7 +21,7 @@ export class ParagraphComponent implements OnInit{
 
   cacheChanges(event: any) {
     const newValue = event.target.innerHTML;
-    this.data = newValue;
+
     this.dataChange.emit(newValue);
   }
 }

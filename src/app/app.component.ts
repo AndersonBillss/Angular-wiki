@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';4
+import { parsePageContent } from './functions/pageContentFunctions';
 
 interface WeatherForecast {
   date: string;
@@ -13,8 +14,17 @@ interface WeatherForecast {
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent/*  implements OnInit  */{
+export class AppComponent implements OnInit {
+  pageHtml: string | undefined = ''
 
+  ngOnInit(): void {
+    const string = "this is a test [[string|samplePage]] for my wiki website. I will create a function to turn this string into innerHtml with links in it. Linked strings will be in this format: ![[string|targetRoute]]. <div></div> <> '' &&&&"
+
+    this.pageHtml = parsePageContent(string)
+    if(this.pageHtml == undefined){
+      console.log('parsing error')
+    }
+  }
   
 
 /*   
